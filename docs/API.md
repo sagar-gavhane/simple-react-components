@@ -6,10 +6,10 @@ Provide contextual feedback messages for typical user actions with the handful o
 
 **props**
 
-| Name         | Type     | Default | Description                                                       |
-| ------------ | -------- | ------- | ----------------------------------------------------------------- |
-| children     | node     | null    | The content of the component                                      |
-| isOpen       | boolean  | true    | open alert component                                              |
-| applyEffects | function | noop    | Apply side effects after mounting and unmounting alert component. |
-| dismissible  | boolean  | true    | alert dismissible                                                 |
-| dismissAlert | function | noop    | call dismissAlert function if you want to dismiss alert from dom. |
+| Name          | Type        | Default | Description                                                       |
+| ------------- | ----------- | ------- | ----------------------------------------------------------------- |
+| children      | render prop | null    | The content of the component                                      |
+| isOpen        | boolean     | true    | Open alert component                                              |
+| applyEffects  | function    | noop    | Apply side effects after mounting and unmounting alert component. |
+| isDismissible | boolean     | true    | Alert dismissible                                                 |
+| dismissAlert  | function    | noop    | Call dismissAlert function if you want to dismiss alert from dom. |

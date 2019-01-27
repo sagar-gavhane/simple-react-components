@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import noop from './../../utils/noop'
 
 export interface AlertProps {
-  children: any
+  children?: any
   isOpen?: boolean
   isDismissible?: boolean
   applyEffects?: Function
