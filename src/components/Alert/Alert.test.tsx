@@ -1,7 +1,5 @@
 import React from 'react'
-
 import { render, fireEvent } from 'react-testing-library'
-
 import Alert from './Alert'
 
 test('mount and unmount without crashing', () => {
@@ -23,15 +21,16 @@ test('mount and unmount without crashing', () => {
 
 test('props works properly', () => {
   const { container, getByTestId, queryByTestId } = render(
-    <Alert isOpen={true}>
+    <Alert isOpen isDismissible>
       {(props: any) => (
         <div onClick={props.dismissAlert} data-testid='alert-container'>
-          This is alert text goes.
+          This is alert text.
         </div>
       )}
     </Alert>,
   )
 
+  // prop dismissAlert testing
   expect(container).toBeInTheDocument()
   fireEvent.click(getByTestId('alert-container'))
   expect(queryByTestId('alert-container')).not.toBeInTheDocument()
