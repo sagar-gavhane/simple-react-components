@@ -1,9 +1,9 @@
-import React, { Props } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import Alert from './components/Alert/Alert'
 
 ReactDOM.render(
-  <Alert isOpen>
+  <Alert isOpen={false}>
     {(props: any) => {
       return (
         <div className='alert alert-success' onClick={props.dismissAlert}>
