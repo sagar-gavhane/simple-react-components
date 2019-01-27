@@ -1,6 +1,12 @@
 {
   "name": "simple-react-components",
   "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Sagar Gavhane",
+    "email": "sgavhane70@gmail.com",
+    "url": "https://sagar-gavhane.com"
+  },
   "private": false,
   "scripts": {
     "start": "react-scripts start",

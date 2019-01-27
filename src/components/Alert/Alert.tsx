@@ -2,11 +2,13 @@ import React, { Fragment, FC, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import noop from './../../utils/noop'
 
-const Alert: FC<{
+type AlertProps = {
   isOpen?: boolean
   children: any
   applyEffects?: Function
-}> = props => {
+}
+
+const Alert: FC<AlertProps> = props => {
   const { children } = props
   const [state, setState] = useState({ isOpen: props.isOpen })
 
