@@ -1,4 +1,3 @@
-import React from 'react'
-import { render } from 'react-dom'
+import Alert from './components/Alert'
 
-render(<div />, document.getElementById('root'))
+export { Alert }

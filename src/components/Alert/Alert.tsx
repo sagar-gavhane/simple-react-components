@@ -9,11 +9,11 @@ export interface AlertProps {
   applyEffects?: Function
 }
 
-const Alert: FC<AlertProps> = props => {
+const Alert: FC<AlertProps> = (props: AlertProps) => {
   const { children, isOpen, isDismissible } = props
   const [state, setState] = useState({ isOpen })
 
-  const dismissAlert = () => {
+  const dismissAlert: Function = () => {
     if (isDismissible) {
       setState({ isOpen: !state.isOpen })
     }
