@@ -19,10 +19,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install deps and build (with cache)
-        uses: bahmutov/npm-install@v1
-        with:
-          install-command: yarn --frozen-lockfile --silent
+      - name: Install deps and build
+        run: yarn --frozen-lockfile --silent
 
       - name: Lint
         run: yarn lint
