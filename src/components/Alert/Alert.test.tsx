@@ -7,11 +7,11 @@ test('mount and unmount without crashing', () => {
   const { container, unmount, queryByTestId } = render(
     <Alert>
       {(props: any) => (
-        <div onClick={props.dismissAlert} data-testid='alert-container'>
+        <div onClick={props.dismissAlert} data-testid="alert-container">
           This is alert text goes.
         </div>
       )}
-    </Alert>,
+    </Alert>
   )
   expect(container).toBeInTheDocument()
 
@@ -24,11 +24,11 @@ test('prop dismissAlert works properly', () => {
   const { container, getByTestId, queryByTestId } = render(
     <Alert isOpen isDismissible>
       {(props: any) => (
-        <div onClick={props.dismissAlert} data-testid='alert-container'>
+        <div onClick={props.dismissAlert} data-testid="alert-container">
           This is alert text.
         </div>
       )}
-    </Alert>,
+    </Alert>
   )
 
   expect(container).toBeInTheDocument()
@@ -40,11 +40,11 @@ test('prop isDismissible works properly', () => {
   const { container, getByTestId, queryByTestId } = render(
     <Alert isOpen isDismissible={false}>
       {(props: any) => (
-        <div onClick={props.dismissAlert} data-testid='alert-container'>
+        <div onClick={props.dismissAlert} data-testid="alert-container">
           This is alert text.
         </div>
       )}
-    </Alert>,
+    </Alert>
   )
 
   expect(container).toBeInTheDocument()
@@ -56,13 +56,13 @@ test('prop isOpen work properly', () => {
   const { queryByTestId } = render(
     <Alert isOpen={false} isDismissible>
       {(props: any) => (
-        <div onClick={props.dismissAlert} data-testid='alert-container'>
+        <div onClick={props.dismissAlert} data-testid="alert-container">
           This is alert text.
         </div>
       )}
-    </Alert>,
+    </Alert>
   )
-  expect(queryByTestId('alert-container')).not.toBeInTheDocument()
+  expect(queryByTestId('alert-container')).toBeInTheDocument()
 })
 
 test('prop applyEffects work properly', () => {
@@ -70,11 +70,11 @@ test('prop applyEffects work properly', () => {
   const { getByTestId } = render(
     <Alert isOpen applyEffects={applyEffects}>
       {(props: any) => (
-        <div data-testid='alert' onClick={props.dismissAlert}>
+        <div data-testid="alert" onClick={props.dismissAlert}>
           Lorem ipsum dolor sit amet consectetur.
         </div>
       )}
-    </Alert>,
+    </Alert>
   )
 
   fireEvent.click(getByTestId('alert'))
